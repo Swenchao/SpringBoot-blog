@@ -49,7 +49,7 @@ public class IndexController {
                          @RequestParam String query, Model model) {
         // 模糊查询select * from t_blog where title like '%内容%'
         model.addAttribute("page", blogService.listBlog("%"+query+"%", pageable));
-        // 返回给前端我查询的内容
+        // 返回给前端查询的内容
         model.addAttribute("query", query);
         return "search";
     }
