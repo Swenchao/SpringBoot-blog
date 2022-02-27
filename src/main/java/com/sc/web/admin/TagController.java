@@ -29,8 +29,6 @@ public class TagController {
     public String tags(@PageableDefault(size = 10,sort = {"id"},direction = Sort.Direction.DESC)
                                Pageable pageable, Model model) {
         model.addAttribute("page",tagService.listTag(pageable));
-        System.out.println("+++++++++++++++++++++++");
-        System.out.println("taglist");
         return "admin/tags";
     }
 

@@ -20,10 +20,12 @@ public class MD5Utils {
             StringBuffer buf = new StringBuffer("");
             for (int offset = 0; offset < byteDigest.length; offset++) {
                 i = byteDigest[offset];
-                if (i < 0)
+                if (i < 0) {
                     i += 256;
-                if (i < 16)
+                }
+                if (i < 16) {
                     buf.append("0");
+                }
                 buf.append(Integer.toHexString(i));
             }
             //32位加密
@@ -37,6 +39,6 @@ public class MD5Utils {
     }
 
     public static void main(String[] args){
-        System.out.println(code(""));
+        System.out.println(code("123456a."));
     }
 }

@@ -11,8 +11,10 @@ import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 
-
-// JpaSpecificationExecutor帮助我们实现动态组合查询
+/**
+ * @author swenchao
+ * JpaSpecificationExecutor实现动态组合查询
+ */
 public interface BlogRepository extends JpaRepository<Blog, Long>, JpaSpecificationExecutor<Blog> {
 
     // @Query自定义查询语句注解
