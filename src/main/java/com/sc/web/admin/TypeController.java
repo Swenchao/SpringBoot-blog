@@ -28,8 +28,6 @@ public class TypeController {
     @GetMapping("/types")
     public String types(@PageableDefault(size = 10,sort = {"id"},direction = Sort.Direction.DESC)
                                 Pageable pageable, Model model) {
-        System.out.println("+++++++++++++++++++++++");
-        System.out.println("typelist");
         model.addAttribute("page",typeService.listType(pageable));
         return "admin/types";
     }
